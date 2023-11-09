@@ -1,8 +1,8 @@
 package personnages.principaux;
-
+import interfaces.IGuerrier;
 import personnages.Humain;
 
-public class Yakuza extends Humain {
+public class Yakuza extends Humain implements IGuerrier {
     private String clan;
     private int reputation;
 
@@ -40,5 +40,10 @@ public class Yakuza extends Humain {
     public void direBonjour() {
         super.direBonjour();
         this.parler("Mon clan " + this.clan);
+    }
+
+    @Override
+    public void combattre(Humain h) {
+
     }
 }

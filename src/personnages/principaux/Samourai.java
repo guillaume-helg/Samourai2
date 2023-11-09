@@ -1,6 +1,9 @@
 package personnages.principaux;
 
-public class Samourai extends Ronin {
+import interfaces.IGuerrier;
+import personnages.Humain;
+
+public class Samourai extends Ronin implements IGuerrier {
 
     private String seigneur;
     public Samourai(String nom, int argent, String boisson, String seigneur) {
@@ -15,5 +18,13 @@ public class Samourai extends Ronin {
 
     public void boire(String boisson) {
         this.parler("Mmmm, un bon verre de " + this.getBoisson() + "! GLOUPS !");
+    }
+
+    /**
+     * @param h : Adversaire du samourai
+     */
+    @Override
+    public void combattre(Humain h) {
+
     }
 }

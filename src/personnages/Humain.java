@@ -1,6 +1,6 @@
 package personnages;
 
-public class Humain {
+public abstract class Humain {
     private String nom;
     private int argent;
     private String boisson;
@@ -11,7 +11,7 @@ public class Humain {
         this.boisson = boisson;
     }
 
-    public void parler(String texte) {
+    protected void parler(String texte) {
         System.out.println(this.nom + " - " + texte);
     }
 
@@ -28,7 +28,7 @@ public class Humain {
     }
 
     public int getArgent() {
-        return argent;
+        return this.argent;
     }
 
     public String getBoisson() {

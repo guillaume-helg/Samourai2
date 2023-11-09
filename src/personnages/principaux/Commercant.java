@@ -1,8 +1,9 @@
 package personnages.principaux;
 
+import interfaces.IPleutre;
 import personnages.Humain;
 
-public class Commercant extends Humain {
+public class Commercant extends Humain implements IPleutre {
 
 
     public Commercant(String nom, int argent) {
@@ -17,5 +18,10 @@ public class Commercant extends Humain {
 
     public void recevoir(int argent) {
         this.gagnerArgent(argent);
+    }
+
+    @Override
+    public void fuir() {
+
     }
 }
